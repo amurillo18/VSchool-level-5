@@ -25,7 +25,21 @@ app.post("/bounty",(req, res) => {
     bounties.push(newBounty)
     res.send(`Successfully added to the database`)
     
-})
+});
+
+app.put("/bounty/:bountyId", (req,res) => {
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+    const updatedBounty = Object.assign(bounties[bountyIndex], req.body)
+    res.send(updatedBounty)
+});
+
+app.delete("/bounty/:bountyId",(req,res)=> {
+    const bountyId = req.params.bountyId;
+    const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+    bounties.splice(bountyIndex, 1)
+    res.send("successfully deleted bounty")
+});
 
 app.listen(port,() => {
     console.log(`Server is listening on port ${port}`);
