@@ -1,0 +1,49 @@
+*{
+  background-color: rgb(43, 42, 42);
+  color: whitesmoke;
+}
+
+body {
+  margin: 0
+}
+
+.bounty-list {
+  margin: 15px;
+  border: whitesmoke 2px solid;
+  padding: 10px;
+}
+
+.list-title{
+  display: flex;
+  justify-content: center;
+}
+
+.add-bounty {
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.type-jedi{
+  color: rgb(80, 80, 252);
+}
+
+.type-sith {
+  color: rgb(255, 100, 100);
+}
+
+input,
+select {
+  background-color: whitesmoke;
+  color: black;
+}
+
+button {
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+}
+
+.deleteBtn {
+  margin-right: 5px;
+}
