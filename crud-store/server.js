@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 mongoose.set('strictQuery', true)
-mongoose.connect("mongodb+srv://Amurillo:Alex2015@cluster0.uvmcw4x.mongodb.net/crudStoredb?retryWrites=true&w=majority", () => console.log('connected to database'))
+mongoose.connect("mongodb+srv://Amurillo:{password}@cluster0.uvmcw4x.mongodb.net/crudStoredb?retryWrites=true&w=majority", () => console.log('connected to database'))
 
 app.use('/inventory', require('./routes/inventory'))
 
